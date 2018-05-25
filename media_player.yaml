@@ -10,7 +10,7 @@
   client_secret: !secret spotify_secret
 
 - platform: samsungtv
-  host: 192.168.240.50  
+  host: !secret samsung_id
   name: Samsung Smart TV
   mac: 68:27:37:C9:80:FD
   SCAN_INTERVAL: 20
