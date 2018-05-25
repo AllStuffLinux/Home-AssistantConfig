@@ -1,0 +1,35 @@
+####################################################
+#                                                  #
+#             Home Assistant Sensors               #
+#                                                  #
+####################################################
+
+###                  WEATHER                   ####
+- platform: yr
+#- platform: wunderground
+#  name: 'Weather'
+#  api_key: !secret forecast_key
+#  monitored_conditions:
+#    - alerts
+#    - dewpoint_f
+#    - feelslike_f
+#    - heat_index_f
+#    - elevation
+#    - precip_1hr_in
+#    - precip_1hr_string
+#    - precip_today_in
+#    - relative_humidity
+#    - temp_f
+#    - wind_mph
+
+- platform: mqtt
+  name: "Temperature (Living Room)"
+  state_topic: "livingroom/sensor/temperature"
+  qos: 0
+  unit_of_measurment: farenheit
+
+- platform: mqtt
+  name: "Humidity (Living Room)"
+  state_topic: "livingroom/sensor/humidity"
+  qos: 0
+  unit_of_measurment: "%"

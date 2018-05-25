@@ -1,0 +1,18 @@
+####################################################
+#                                                  #
+#                   Media_Players                  #
+#                                                  #
+####################################################
+
+- platform: spotify
+  name: Spotify
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+
+- platform: samsungtv
+  host: 192.168.240.50  
+  name: Samsung Smart TV
+  mac: 68:27:37:C9:80:FD
+  SCAN_INTERVAL: 20
+
+#- platform: vlc

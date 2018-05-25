@@ -1,0 +1,12 @@
+media_player.living_room:
+  name:
+  platform: cast
+  unique_id: 8c87893a-2b76-c1b8-e88a-585c914edcbf
+media_player.bedroom:
+  name:
+  platform: cast
+  unique_id: dbd7bccc-e3ee-f634-0e71-8622f5aa202a
+media_player.home_group:
+  name:
+  platform: cast
+  unique_id: c1a52eb0-3aeb-45f6-9d1e-8cec0ea25409
