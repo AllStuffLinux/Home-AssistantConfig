@@ -5,10 +5,10 @@
 ####################################################
 
 #group:
-  default_view:
-    view: yes
+#  default_view:
+#    view: yes
 
-#Main_Weather:
+#Weather:
 #  name: Weather
 #  entities:
 #  - sensor.pws_alerts

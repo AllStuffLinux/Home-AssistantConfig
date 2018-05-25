@@ -33,3 +33,12 @@
   state_topic: "livingroom/sensor/humidity"
   qos: 0
   unit_of_measurment: "%"
+
+- platform: fastdotcom 
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+    - type: memory_free
+    - type: processor_use
+

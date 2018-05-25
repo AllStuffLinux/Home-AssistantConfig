@@ -33,3 +33,4 @@ sensor.pws_dewpoint_f:
 light.kitchen_table:
   friendly_name: Kitchen Light
   icon: mdi:flashlight
+group.weather: {}

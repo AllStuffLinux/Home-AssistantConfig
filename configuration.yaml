@@ -6,18 +6,11 @@
 homeassistant:
   customize: !include customize.yaml
   elevation: 809
-  latitude: 35.7362
-  longitude: -80.1931
+  latitude: !secret latitude
+  longitude: !secret longitude
   name: "Our Home"
   time_zone: America/New_York
   unit_system: imperial
-
-####################################################
-# CHECK CONFIG FROM TERMINAL USE FOLLOWING COMMANDS.
-# sudo su -s /bin/bash homeassistant
-# source /srv/homeassistant/bin/activate
-# hass --script check_config
-####################################################
 
 ####################################################
 #                                                  #
