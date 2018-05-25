@@ -4,9 +4,6 @@ media_player.roku_18c23m028138:
   friendly_name: Roku
 sensor.pws_alerts:
   friendly_name: Alerts
-  light.bedroom:
-  friendly_name: SleepRoom
-  hidden: true
 sensor.pws_temp_f:
   friendly_name: Temp
   icon: mdi:temperature-fahrenheit
@@ -18,7 +15,7 @@ sensor.pws_wind_mph:
   friendly_name: Wind
 sensor.yr_symbol:
   hidden: true
-  sensor.pws_precip_1hr_in:
+sensor.pws_precip_1hr_in:
   hidden: true
 sensor.pws_precip_1hr_string:
   hidden: true

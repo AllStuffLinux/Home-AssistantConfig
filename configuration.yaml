@@ -6,12 +6,18 @@
 homeassistant:
   customize: !include customize.yaml
   elevation: 809
-  latitude: !secret latitude
-  longitude: !secret longitude
+  latitude: 35.7362
+  longitude: -80.1931
   name: "Our Home"
   time_zone: America/New_York
   unit_system: imperial
-  whitelist_external_dirs: /home/homeassistant/camera
+
+####################################################
+# CHECK CONFIG FROM TERMINAL USE FOLLOWING COMMANDS.
+# sudo su -s /bin/bash homeassistant
+# source /srv/homeassistant/bin/activate
+# hass --script check_config
+####################################################
 
 ####################################################
 #                                                  #
@@ -27,7 +33,7 @@ zone: !include zones.yaml
 switch: !include switches.yaml
 device_tracker: !include device_tracker.yaml
 mqtt: !include mqtt.yaml
-# camera: !include camera.yaml
+camera: !include camera.yaml
 ####################################################
 #introduction:
 frontend:
@@ -55,3 +61,4 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 5
   use_x_forwarded_for: True
+
