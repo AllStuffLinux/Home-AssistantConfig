@@ -6,12 +6,19 @@
 
 #group:
 default_view:
-
-
-Weather:
-  name: Weather
+  name: Home
   view: yes
   entities:
+    - group.weather
+    - group.bedroom
+    - group.livingroom
+    - media_player.spotify
+
+weather:
+  name: Weather
+#  view: yes
+  entities:
+  - camera.weather_radar
   - sensor.pws_alerts
   - sensor.pws_temp_f
   - sensor.pws_precip_today_in
@@ -22,15 +29,32 @@ Weather:
   - sensor.pws_elevation
   - sensor.pws_dewpoint_string
   - sensor.pws_dewpoint_f
+  - sun.sun
 
-Bedroom:
+bedroom:
   name: Bedroom
-  view: yes
+#  view: yes
   entities:
   -  media_player.roku_18c23m028138
 
-Livingroom:
+livingroom:
   name: Livingroom
-  view: yes
+#  view: yes
   entities:
   - media_player.samsung_smart_tv
+  - sensor.temperature_living_room
+  - sensor.humidity_living_room
+
+internet:
+  name: Internet
+  view: yes
+  entities:
+  - sensor.fastcom_download
+
+system monitor:
+  name: System Monitor
+  view: yes
+  entities:
+  - sensor.memory_free
+  - sensor.processor_use
+

@@ -34,8 +34,10 @@
   qos: 0
   unit_of_measurment: "%"
 
+### Bandwidth test
 - platform: fastdotcom 
 
+### System monitor
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

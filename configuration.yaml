@@ -27,6 +27,7 @@ switch: !include switches.yaml
 device_tracker: !include device_tracker.yaml
 mqtt: !include mqtt.yaml
 camera: !include camera.yaml
+panel_iframe: !include iframe.yaml
 
 ####################################################
 #introduction:
