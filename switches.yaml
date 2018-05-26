@@ -1,0 +1,15 @@
+####################################################
+#                                                  #
+#              Home Assistant Switches             #
+#                                                  #
+####################################################
+
+- platform: mqtt
+  name: "Livingroom lamp"
+  state_topic: "livingroom/switch/lamp1"
+  command_topic: "livingroom/switch/lamp1"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  retain: true

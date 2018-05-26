@@ -44,6 +44,7 @@ livingroom:
   - media_player.samsung_smart_tv
   - sensor.temperature_living_room
   - sensor.humidity_living_room
+  - switch.livingroom_lamp
 
 internet:
   name: Internet
