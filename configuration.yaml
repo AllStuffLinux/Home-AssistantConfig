@@ -1,8 +1,9 @@
-####################################################
-#                                                  #
-#                 HOME ASSISTANT                   #
-#                                                  #
-####################################################
+######################################################
+###                                                ###
+###                  HOME ASSISTANT                ###
+###                                                ###
+######################################################
+
 homeassistant:
   customize: !include customize.yaml
   elevation: 809
@@ -11,12 +12,25 @@ homeassistant:
   name: "Our Home"
   time_zone: America/New_York
   unit_system: imperial
+# introduction:
 
-####################################################
-#                                                  #
-#                 Included files                   #
-#                                                  #
-####################################################
+frontend:
+  themes: !include_dir_merge_named themes/
+config:
+updater:
+discovery:
+conversation:
+history:
+logbook:
+map:
+sun:
+
+######################################################
+###                                                ###
+###                  INCLUDE FILES                 ###
+###                                                ###
+######################################################
+
 sensor: !include sensors.yaml
 media_player: !include media_player.yaml
 group: !include groups.yaml
@@ -28,29 +42,39 @@ device_tracker: !include device_tracker.yaml
 mqtt: !include mqtt.yaml
 camera: !include camera.yaml
 panel_iframe: !include iframe.yaml
+input_select: !include input_select.yaml
+#input_boolean: !include input_boolean.yaml
 
-####################################################
-#introduction:
-frontend:
-config:
-updater:
-discovery:
-conversation:
-history:
-logbook:
-map:
-sun:
+######################################################
+###                                                ###
+###                  TEXT TO SPEECH                ###
+###                                                ###
+######################################################
 
-###################################################
 tts:
   - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
 
 cloud:
+
+######################################################
+###                                                ###
+###                      LOGGING                   ###
+###                                                ###
+######################################################
 
 logger:
   default: warning
   logs:
     homeassistant.components.mqtt: debug
+
+######################################################
+###                                                ###
+###                     WEB ACCESS                 ###
+###                                                ###
+######################################################
 
 http:
   api_password: !secret http_password

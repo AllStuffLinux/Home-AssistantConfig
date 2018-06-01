@@ -1,11 +1,17 @@
-####################################################
-#                                                  #
-#             Home Assistant Sensors               #
-#                                                  #
-####################################################
+######################################################
+#                                                    #
+#               Home Assistant Sensors               #
+#                                                    #
+######################################################
 
-###                  WEATHER                   ####
+######################################################
+###                                                ###
+###                      WEATHER                   ###
+###                                                ###
+######################################################
+
 - platform: yr
+
 - platform: wunderground
   name: 'Weather'
   api_key: !secret forecast_key
@@ -22,25 +28,53 @@
     - temp_f
     - wind_mph
 
+######################################################
+###                                                ###
+###               LIVING ROOM CLIMATE              ###
+###                                                ###
+######################################################
+
 - platform: mqtt
-  name: "Temperature (Living Room)"
+  name: "Temperature"
   state_topic: "livingroom/sensor/temperature"
   qos: 0
   unit_of_measurment: farenheit
 
 - platform: mqtt
-  name: "Humidity (Living Room)"
+  name: "Humidity"
   state_topic: "livingroom/sensor/humidity"
   qos: 0
   unit_of_measurment: "%"
 
-### Bandwidth test
-- platform: fastdotcom 
+######################################################
+###                                                ###
+###                 BANDWIDTH TEST                 ###
+###                                                ###
+######################################################
 
-### System monitor
+- platform: fastdotcom 
+  name: "Download Speed"
+
+######################################################
+###                                                ###
+###                  SYSTEM MONITOR                ###
+###                                                ###
+######################################################
+
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
     - type: memory_free
     - type: processor_use
 
+######################################################
+###                                                ###
+###                      POOL                      ###
+###                                                ###
+######################################################
+
+- platform: mqtt
+  state_topic: "pool/sensor/temperature"
+  name: "Pool temp"
+  unit_of_measurement: "°f"
+  qos: 1

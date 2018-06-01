@@ -1,18 +1,45 @@
-####################################################
-#                                                  #
-#                   Media_Players                  #
-#                                                  #
-####################################################
+######################################################
+#                                                    #
+#                     Media_Players                  #
+#                                                    #
+######################################################
+
+######################################################
+###                                                ###
+###                    SPOTIFY                     ###
+###                                                ###
+######################################################
 
 - platform: spotify
   name: Spotify
   client_id: !secret spotify_id
   client_secret: !secret spotify_secret
 
+######################################################
+###                                                ###
+###                    SAMSUNG TV                  ###
+###                                                ###
+######################################################
+
 - platform: samsungtv
   host: !secret samsung_id
   name: Samsung Smart TV
   mac: 68:27:37:C9:80:FD
   SCAN_INTERVAL: 20
+# UN58MU6070
 
 #- platform: vlc
+
+######################################################
+###                                                ###
+###                    GOOGLE HOME                 ###
+###                                                ###
+######################################################
+
+- platform: cast
+  name: Google Home
+  host: !secret Google_Home
+
+- platform: cast
+  name: Google Audio
+  host: !secret Chromecast_Audio

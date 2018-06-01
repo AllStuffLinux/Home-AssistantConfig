@@ -1,7 +1,14 @@
+######################################################
+###                                                ###
+###           HOME ASSISTANT CUSTOMIZATIONS        ###
+###                                                ###
+######################################################
+
 media_player.livingroom_tv_un58mu6070:
   friendly_name: Livingroom TV
 media_player.roku_18c23m028138:
   friendly_name: Roku
+
 sensor.pws_alerts:
   friendly_name: Alerts
 sensor.pws_temp_f:
@@ -30,7 +37,8 @@ sensor.pws_dewpoint_string:
   hidden: true
 sensor.pws_dewpoint_f:
   friendly_name: Dewpoint
-light.kitchen_table:
-  friendly_name: Kitchen Light
-  icon: mdi:flashlight
-group.weather: {}
+sensor.temperature_living_room:
+  icon: mdi:temperature-fahrenheit
+
+sensor.fastcom_download:
+  friendly_name: Dl_Speed

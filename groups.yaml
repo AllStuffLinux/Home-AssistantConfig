@@ -1,8 +1,8 @@
-####################################################
-#                                                  #
-#               Home Assistant Groups              #
-#                                                  #
-####################################################
+######################################################
+###                                                ###
+###               HOME ASSISTANT GROUPS            ###
+###                                                ###
+######################################################
 
 #group:
 default_view:
@@ -13,6 +13,13 @@ default_view:
     - group.bedroom
     - group.livingroom
     - media_player.spotify
+    - input_select.hass_theme
+
+######################################################
+###                                                ###
+###                      WEATHER                   ###
+###                                                ###
+######################################################
 
 weather:
   name: Weather
@@ -31,26 +38,39 @@ weather:
   - sensor.pws_dewpoint_f
   - sun.sun
 
+######################################################
+###                                                ###
+###                      BEDROOM                   ###
+###                                                ###
+######################################################
+
 bedroom:
   name: Bedroom
-#  view: yes
+  view: yes
   entities:
   -  media_player.roku_18c23m028138
 
+######################################################
+###                                                ###
+###                    LIVING ROOM                 ###
+###                                                ###
+######################################################
+
 livingroom:
   name: Livingroom
-#  view: yes
+  view: yes
   entities:
   - media_player.samsung_smart_tv
   - sensor.temperature_living_room
   - sensor.humidity_living_room
   - switch.livingroom_lamp
+  - media_player.googlehome7678
 
-internet:
-  name: Internet
-  view: yes
-  entities:
-  - sensor.fastcom_download
+######################################################
+###                                                ###
+###                  SYSTEM MONITOR                ###
+###                                                ###
+######################################################
 
 system monitor:
   name: System Monitor
@@ -58,4 +78,16 @@ system monitor:
   entities:
   - sensor.memory_free
   - sensor.processor_use
+  - sensor.fastcom_download
 
+######################################################
+###                                                ###
+###                       POOL                     ###
+###                                                ###
+######################################################
+
+pool:
+  name: Pool
+  view: yes
+  entities:
+    - sensor.pool_temp

@@ -6,9 +6,9 @@
 
 intruder:
   title: 'Intruder detection'
-#  icon: 'mdi:nature-people'
+  icon: 'mdi:nature-people'
   url: 'http://192.168.240.248/'
 securitycam:
   title: 'Security Cam'
-#  icon: 'mdi:camera'
+  icon: 'mdi:camera'
   url: 'http://192.168.240.248:8081/'
