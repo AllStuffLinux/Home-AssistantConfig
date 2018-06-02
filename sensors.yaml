@@ -78,3 +78,18 @@
   name: "Pool temp"
   unit_of_measurement: "°f"
   qos: 1
+
+######################################################
+###                                                ###
+###                    TIME/DATE                   ###
+###                                                ###
+######################################################
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'

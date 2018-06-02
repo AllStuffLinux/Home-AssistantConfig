@@ -14,6 +14,8 @@ default_view:
     - group.livingroom
     - media_player.spotify
     - input_select.hass_theme
+#    - group.date_and_time
+    - group.date_time
 
 ######################################################
 ###                                                ###
@@ -91,3 +93,24 @@ pool:
   view: yes
   entities:
     - sensor.pool_temp
+
+######################################################
+###                                                ###
+###                    TIME/DATE                   ###
+###                                                ###
+######################################################
+
+date_and_time:
+#     view: yes
+     icon: mdi:home 
+     entities:
+       - group.date_time
+date_time:
+  name: Time and Date
+  entities:
+    - sensor.time
+    - sensor.date
+    - sensor.date_time
+    - sensor.time_date
+    - sensor.time_utc
+    - sensor.beat
