@@ -1,0 +1,18 @@
+######################################################
+###                                                ###
+###                       ZONES                    ###
+###                                                ###
+######################################################
+
+# This will override the default home zone
+- name: Home
+  latitude: 35.752955
+  longitude: -80.11045
+  radius: 250
+  icon: mdi:home-heart
+
+- name: School
+  latitude: 35.864701
+  longitude: -80.181614
+  icon: mdi:school
+

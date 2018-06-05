@@ -6,6 +6,7 @@
 
 media_player.livingroom_tv_un58mu6070:
   friendly_name: Livingroom TV
+  icon: mdi:television
 media_player.roku_18c23m028138:
   friendly_name: Roku
 
@@ -42,3 +43,4 @@ sensor.temperature_living_room:
 
 sensor.fastcom_download:
   friendly_name: Dl_Speed
+  icon: mdi:speedometer

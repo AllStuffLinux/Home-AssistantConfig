@@ -21,12 +21,71 @@
 ###                                                ###
 ######################################################
 
-#alias: 'Set dark theme for the night'
-#  initial_state: True
-#  trigger:
-#    - platform: time
-#      at: '21:00'
-#  action:
-#    - service: frontend.set_theme
-#      data:
-#        name: night
+- alias: 'Set dark theme for the night'
+  initial_state: True
+  trigger:
+    - platform: time
+      at: '21:00'
+  action:
+    - service: frontend.set_theme
+      data:
+        name: night
+
+######################################################
+###                                                ###
+###                  RESTART HASS                  ###
+###                                                ###
+######################################################
+
+- alias: Restart HASS
+  trigger:
+    - platform: state
+      entity_id: input_boolean.restart_hass
+      from: 'off'
+      to: 'on'
+  action:
+    service: homeassistant.restart
+
+######################################################
+###                                                ###
+###             USER DEFINED AUTOMATIONS           ###
+###                                                ###
+######################################################
+
+# Toggles a light when Jeremy is home/away.
+- alias: Jeremy is away
+  trigger:
+    - platform: state
+      entity_id: group.Jeremy
+      to: 'not_home'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.Jeremy_presence
+
+- alias: Jeremy is home
+  trigger:
+    - platform: state
+      entity_id: group.Jeremy
+      to: 'home'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.Jeremy_presence
+
+# Toggles a light when all users are home/away.
+- alias: Group is away
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    to: 'not_home'
+  action:
+      service: homeassistant.turn_off
+      entity_id: light.group_presence
+
+- alias: Group is home
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    to: 'home'
+  action:
+      service: homeassistant.turn_on
+      entity_id: light.group_presence

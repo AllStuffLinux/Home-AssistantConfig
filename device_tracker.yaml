@@ -1,0 +1,26 @@
+######################################################
+###                                                ###
+###          DEVICE TRACKER PRESENCE DETECT        ###
+###                                                ###
+######################################################
+
+- platform: linksys_smart
+  host: 192.168.240.1
+  username: root
+  password: CaudlesOn!y
+  new_device_defaults:
+    track_new_devices: True
+    hide_if_away: False
+
+- platform: owntracks
+  max_gps_accuracy: 20
+  mqtt_topic: "owntracks/#"
+  track_new_devices: yes
+
+# Highly recommended: Assign IP address for devices you want to track so you can know where to find them.
+- platform: nmap_tracker
+  hosts:
+    - 192.168.240.50-150
+  interval_seconds: 30
+#  exclude:
+#   - 192.168.240.250-254

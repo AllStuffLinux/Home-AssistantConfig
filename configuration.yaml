@@ -19,6 +19,8 @@ frontend:
 config:
 updater:
 discovery:
+  ignore:
+    - samsung_tv
 conversation:
 history:
 logbook:
@@ -43,7 +45,7 @@ mqtt: !include mqtt.yaml
 camera: !include camera.yaml
 panel_iframe: !include iframe.yaml
 input_select: !include input_select.yaml
-#input_boolean: !include input_boolean.yaml
+input_boolean: !include input_boolean.yaml
 
 ######################################################
 ###                                                ###

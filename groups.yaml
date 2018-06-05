@@ -4,7 +4,6 @@
 ###                                                ###
 ######################################################
 
-#group:
 default_view:
   name: Home
   view: yes
@@ -14,8 +13,9 @@ default_view:
     - group.livingroom
     - media_player.spotify
     - input_select.hass_theme
-#    - group.date_and_time
     - group.date_time
+    - group.restart_hass
+    - group.hass_theme
 
 ######################################################
 ###                                                ###
@@ -93,6 +93,7 @@ pool:
   view: yes
   entities:
     - sensor.pool_temp
+#  icon: mdi:pool
 
 ######################################################
 ###                                                ###
@@ -114,3 +115,49 @@ date_time:
     - sensor.time_date
     - sensor.time_utc
     - sensor.beat
+
+######################################################
+###                                                ###
+###                 USERS TRACKING                 ###
+###                                                ###
+######################################################
+
+Jeremy: device_tracker.Jeremy_owntracks, device_tracker.Jeremy_nmap
+Sharice: device_tracker.Sharice_owntracks, device_tracker.Sharice_nmap
+Christian: device_tracker.Christian_owntracks, device_tracker.Christian_nmap
+Alexis: device_tracker.Alexis_owntracks, device_tracker.Alexis_nmap
+
+######################################################
+###                                                ###
+###                 RESTART HASS                   ###
+###                                                ###
+######################################################
+
+restart_hass:
+  name: Restart HASS
+  entities:
+    - input_boolean.restart_hass
+
+######################################################
+###                                                ###
+###                   CHANGE THEMES                ###
+###                                                ###
+######################################################
+
+hass_theme:
+  name: Change Hass theme
+  entities:
+    - input_select.hass_theme
+
+######################################################
+###                                                ###
+###                 SYSTEM MONITOR                 ###
+###                                                ###
+######################################################
+
+system_monitor:
+  name: System monitor
+  entities:
+    - group.system_monitor
+#  view: yes
+
