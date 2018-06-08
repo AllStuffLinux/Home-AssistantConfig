@@ -53,7 +53,16 @@
 ######################################################
 
 - platform: fastdotcom 
-  name: "Download Speed"
+  name: "Speedtest_1"
+- platform: speedtest
+  name: "Speedtest_2"
+  minute:
+    - 0
+    - 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
 
 ######################################################
 ###                                                ###
@@ -93,3 +102,21 @@
     - 'time_date'
     - 'time_utc'
     - 'beat'
+
+######################################################
+###                                                ###
+###                    PI-HOLE                     ###
+###                                                ###
+######################################################
+
+- platform: pi_hole
+  host: 192.168.240.247
+  monitored_conditions:
+    - ads_blocked_today
+    - ads_percentage_today
+    - dns_queries_today
+    - domains_being_blocked
+    - queries_cached
+    - queries_forwarded
+    - unique_clients
+    - unique_domains

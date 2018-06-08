@@ -10,6 +10,12 @@ media_player.livingroom_tv_un58mu6070:
 media_player.roku_18c23m028138:
   friendly_name: Roku
 
+######################################################
+###                                                ###
+###                      WEATHER                   ###
+###                                                ###
+######################################################
+
 sensor.pws_alerts:
   friendly_name: Alerts
 sensor.pws_temp_f:
@@ -44,3 +50,35 @@ sensor.temperature_living_room:
 sensor.fastcom_download:
   friendly_name: Dl_Speed
   icon: mdi:speedometer
+
+group.all_devices:
+  hidden: false
+
+######################################################
+###                                                ###
+###                      PI-HOLE                   ###
+###                                                ###
+######################################################
+
+#sensor.pihole_ads_blocked_today:
+#  friendly_name:Todays Blocked Ads
+#sensor.pihole_ads_percentage_blocked_today:
+#  friendly_name:Todays Percentage Blocked Ads
+#sensor.pihole_dns_queries_cached:
+#  friendly_name: Cached DNS Queries
+#sensor.pihole_dns_queries_forwarded:
+#  friendly_name:Forwarded DNS Queries
+#sensor.pihole_dns_queries_today:
+#  friendly_name:Todays DNS Queries
+#sensor.pihole_dns_unique_clients:
+#  friendly_name: Unique DNS Clients
+#sensor.pihole_dns_unique_domains:
+#  friendly_name:Unique DNS Domains
+#sensor.pihole_domains_blocked:
+#  friendly_name: Blocked Domains
+
+######################################################
+###                                                ###
+###                      XXXXXXX                   ###
+###                                                ###
+######################################################

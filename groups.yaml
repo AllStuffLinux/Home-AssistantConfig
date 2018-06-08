@@ -7,6 +7,7 @@
 default_view:
   name: Home
   view: yes
+  icon: mdi:home-assistant
   entities:
     - group.weather
     - group.bedroom
@@ -51,6 +52,7 @@ bedroom:
   view: yes
   entities:
   -  media_player.roku_18c23m028138
+  icon: mdi:hotel
 
 ######################################################
 ###                                                ###
@@ -59,7 +61,7 @@ bedroom:
 ######################################################
 
 livingroom:
-  name: Livingroom
+  name: Living room
   view: yes
   entities:
   - media_player.samsung_smart_tv
@@ -67,6 +69,7 @@ livingroom:
   - sensor.humidity_living_room
   - switch.livingroom_lamp
   - media_player.googlehome7678
+  icon: mdi:sofa
 
 ######################################################
 ###                                                ###
@@ -81,6 +84,23 @@ system monitor:
   - sensor.memory_free
   - sensor.processor_use
   - sensor.fastcom_download
+  icon: mdi:chart-line
+
+######################################################
+###                                                ###
+###                  INTERNET SPEED                ###
+###                                                ###
+######################################################
+
+internet_speed:
+  name: Internet Speed
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - group.internet_speed
+  icon: mdi:speedometer
+  view: yes
 
 ######################################################
 ###                                                ###
@@ -93,7 +113,7 @@ pool:
   view: yes
   entities:
     - sensor.pool_temp
-#  icon: mdi:pool
+  icon: mdi:pool
 
 ######################################################
 ###                                                ###
@@ -151,13 +171,13 @@ hass_theme:
 
 ######################################################
 ###                                                ###
-###                 SYSTEM MONITOR                 ###
+###                CONNECTED DEVICES               ###
 ###                                                ###
 ######################################################
 
-system_monitor:
-  name: System monitor
-  entities:
-    - group.system_monitor
-#  view: yes
-
+device_tracker_view:
+    name: Connected devices
+    view: yes
+    icon: mdi:wifi
+    entities:
+    - group.all_devices

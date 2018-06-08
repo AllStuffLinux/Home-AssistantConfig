@@ -17,10 +17,9 @@
   mqtt_topic: "owntracks/#"
   track_new_devices: yes
 
-# Highly recommended: Assign IP address for devices you want to track so you can know where to find them.
 - platform: nmap_tracker
   hosts:
-    - 192.168.240.50-150
+    - 192.168.240.57
+    - 192.168.240.61
+    - 192.168.240.62
   interval_seconds: 30
-#  exclude:
-#   - 192.168.240.250-254
