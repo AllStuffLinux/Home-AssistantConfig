@@ -120,3 +120,30 @@
     - queries_forwarded
     - unique_clients
     - unique_domains
+
+######################################################
+###                                                ###
+###            LENOVO HARDWARE MONITOR             ###
+###                                                ###
+######################################################
+
+- platform: openhardwaremonitor
+  host: 192.168.240.53
+
+######################################################
+###                                                ###
+###               PHONE BATTERY LEVEL              ###
+###                                                ###
+######################################################
+
+- platform: mqtt
+  state_topic: "owntracks/username/deviceid"
+  name: "Phone Battery"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+  device_class: battery
+
+
+
+
+

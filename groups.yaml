@@ -92,15 +92,18 @@ system monitor:
 ###                                                ###
 ######################################################
 
-internet_speed:
+internet_speed_view:
+  view: yes
+  name: Internet Speed
+  entities:
+    - group.internet_speed
+  icon: mdi:speedometer
+internet_Speed:
   name: Internet Speed
   entities:
     - sensor.speedtest_download
     - sensor.speedtest_ping
     - sensor.speedtest_upload
-    - group.internet_speed
-  icon: mdi:speedometer
-  view: yes
 
 ######################################################
 ###                                                ###
