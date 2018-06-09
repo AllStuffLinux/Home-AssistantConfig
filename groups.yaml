@@ -77,14 +77,19 @@ livingroom:
 ###                                                ###
 ######################################################
 
-system monitor:
+system monitor_view:
   name: System Monitor
   view: yes
+  entities:
+    - group.system_monitor
+  icon: mdi:chart-line
+system monitor:
+  name: system monitor
   entities:
   - sensor.memory_free
   - sensor.processor_use
   - sensor.fastcom_download
-  icon: mdi:chart-line
+
 
 ######################################################
 ###                                                ###

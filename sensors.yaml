@@ -52,7 +52,7 @@
 ###                                                ###
 ######################################################
 
-- platform: fastdotcom 
+- platform: fastdotcom
   name: "Speedtest_1"
 - platform: speedtest
   name: "Speedtest_2"
@@ -71,6 +71,7 @@
 ######################################################
 
 - platform: systemmonitor
+  name: System Monitor
   resources:
     - type: disk_use_percent
     - type: memory_free
@@ -111,15 +112,17 @@
 
 - platform: pi_hole
   host: 192.168.240.247
-  monitored_conditions:
-    - ads_blocked_today
-    - ads_percentage_today
-    - dns_queries_today
-    - domains_being_blocked
-    - queries_cached
-    - queries_forwarded
-    - unique_clients
-    - unique_domains
+- platform: template
+  sensors:
+    pihole_queries_today:
+      value_template: '{{ states.sensor.pihole.attributes.queries_today }}'
+      friendly_name: 'Queries Today'
+    pihole_percentage_today:
+      value_template: '{{ states.sensor.pihole.attributes.percentage_today }}'
+      friendly_name: 'Percentage Today'
+    pihole_domains_blocked:
+      value_template: '{{ states.sensor.pihole.attributes.domains_blocked }}'
+      friendly_name: 'Domains Blocked'
 
 ######################################################
 ###                                                ###
@@ -142,8 +145,4 @@
   unit_of_measurement: "%"
   value_template: '{{ value_json.batt }}'
   device_class: battery
-
-
-
-
 

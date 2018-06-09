@@ -25,7 +25,7 @@
   initial_state: True
   trigger:
     - platform: time
-      at: '21:00'
+      at: '1:00'
   action:
     - service: frontend.set_theme
       data:

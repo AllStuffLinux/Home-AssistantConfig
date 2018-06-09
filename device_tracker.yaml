@@ -9,8 +9,8 @@
   username: root
   password: CaudlesOn!y
   new_device_defaults:
-    track_new_devices: True
-    hide_if_away: False
+    track_new_devices: false
+    hide_if_away: false
 
 - platform: owntracks
   max_gps_accuracy: 20

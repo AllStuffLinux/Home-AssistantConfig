@@ -3,6 +3,12 @@ media_player.livingroom_tv_un58mu6070:
   icon: mdi:television
 media_player.roku_18c23m028138:
   friendly_name: Roku
+media_player.googlehome7678:
+  friendly_name: Google Home
+  icon: mdi:google-home
+media_player.living_room_2:
+  hidden: true
+
 sensor.pws_alerts:
   friendly_name: Alerts
 sensor.pws_temp_f:
@@ -36,8 +42,10 @@ sensor.temperature_living_room:
 sensor.fastcom_download:
   friendly_name: Dl_Speed
   icon: mdi:speedometer
+
 group.all_devices:
   hidden: false
+
 device_tracker.gears3d084:
   friendly_name: Jeremy's Watch
   entity_picture: /local/Lightsaber-Red-icon.png
@@ -53,7 +61,4 @@ device_tracker.sharices_phone:
 device_tracker.28fe19a2fd1248f594a90807e4e87ffa:
   friendly_name: Alexis's Phone
   entity_picture: /local/R2D2-icon.png
-media_player.living_room_2:
-  hidden: true
-device_tracker.89f821be701cbe10df09f5175b1ab3fb:
-  hidden: true
+
