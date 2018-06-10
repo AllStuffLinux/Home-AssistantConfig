@@ -18,3 +18,51 @@ media_player.living_room_2:
   name:
   platform: cast
   unique_id: 2652ed53-6005-491f-b3a2-e9e406ac034a
+sensor.pws_precip_1hr_string:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,precip_1hr_string'
+sensor.pws_wind_mph:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,wind_mph'
+sensor.pws_precip_today_in:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,precip_today_in'
+sensor.pws_relative_humidity:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,relative_humidity'
+sensor.pws_feelslike_f:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,feelslike_f'
+sensor.pws_dewpoint_f:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,dewpoint_f'
+sensor.pws_alerts:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,alerts'
+sensor.pws_temp_f:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,temp_f'
+sensor.pws_heat_index_f:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,heat_index_f'
+sensor.pws_elevation:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,elevation'
+sensor.pws_precip_1hr_in:
+  name:
+  platform: wunderground
+  unique_id: '@-80.110450,35.752955,precip_1hr_in'
+media_player.roku_18c23m028138:
+  name:
+  platform: roku
+  unique_id: 18C23M028138

@@ -46,6 +46,7 @@ camera: !include camera.yaml
 panel_iframe: !include iframe.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
+notify: !include notify.yaml
 
 ######################################################
 ###                                                ###
