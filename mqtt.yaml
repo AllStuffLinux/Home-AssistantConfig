@@ -15,3 +15,5 @@
     topic: 'hass/status'
     payload: 'offline'
     qos: 0
+  discovery: true
+#  discovery_prefix: homeassistant

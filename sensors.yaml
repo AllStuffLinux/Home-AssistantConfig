@@ -112,17 +112,15 @@
 
 - platform: pi_hole
   host: 192.168.240.247
-- platform: template
-  sensors:
-    pihole_queries_today:
-      value_template: '{{ states.sensor.pihole.attributes.queries_today }}'
-      friendly_name: 'Queries Today'
-    pihole_percentage_today:
-      value_template: '{{ states.sensor.pihole.attributes.percentage_today }}'
-      friendly_name: 'Percentage Today'
-    pihole_domains_blocked:
-      value_template: '{{ states.sensor.pihole.attributes.domains_blocked }}'
-      friendly_name: 'Domains Blocked'
+  monitored_conditions:
+  - ads_blocked_today
+  - ads_percentage_today
+  - dns_queries_today
+  - domains_being_blocked
+  - queries_cached
+  - queries_forwarded
+  - unique_clients
+  - unique_domains
 
 ######################################################
 ###                                                ###
@@ -146,3 +144,30 @@
   value_template: '{{ value_json.batt }}'
   device_class: battery
 
+######################################################
+###                                                ###
+###                      GLANCES                   ###
+###                                                ###
+######################################################
+
+- platform: glances
+  host: 192.168.240.5
+  name: "VM_Host"
+  resources:
+  - 'disk_use_percent'
+  - 'disk_use'
+  - 'disk_free'
+  - 'memory_use_percent'
+  - 'memory_use'
+  - 'memory_free'
+  - 'swap_use_percent'
+  - 'swap_use'
+  - 'swap_free'
+  - 'processor_load'
+  - 'process_running'
+  - 'process_total'
+  - 'process_thread'
+  - 'process_sleeping'
+  - 'cpu_temp'
+  - 'docker_active'
+  - 'docker_cpu_use'

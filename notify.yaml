@@ -8,7 +8,7 @@
   name: jabber
   sender: !secret xmpp_username
   password: !secret xmpp_password
-  recipient: C17H12ClN5O2@kode.im
+  recipient: AllStuffLinux@kode.im
 
 #- platform: pushbullet
 #    name: paulus

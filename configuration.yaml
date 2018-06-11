@@ -85,10 +85,10 @@ http:
   login_attempts_threshold: 5
   use_x_forwarded_for: True
 
-#coinbase:
-#  api_key: !secret Coinbase_api_key
-#  api_secret: !secret Coinbase_api_secret
-#  exchange_rate_currencies:
-#    - BTC
-#    - ETH
-#    - LTC
+coinbase:
+  api_key: !secret Coinbase_api_key
+  api_secret: !secret Coinbase_api_secret
+  exchange_rate_currencies:
+    - BTC
+    - ETH
+    - LTC
