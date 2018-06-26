@@ -25,21 +25,12 @@
   initial_state: True
   trigger:
     - platform: time
-      at: '21:00'
+      at: '1:00'
   action:
     - service: frontend.set_theme
       data:
         name: Night
 
-- alias: "Set light theme for day"
-  initial_state: on
-  trigger:
-    - platform: time
-      at: '9:00'
-  action:
-    - service: frontend.set_theme
-      data:
-        name: default
 ######################################################
 ###                                                ###
 ###                  RESTART HASS                  ###
@@ -98,21 +89,3 @@
   action:
       service: homeassistant.turn_on
       entity_id: light.group_presence
-
-######################################################
-###                                                ###
-###                  LUNCH REMINDER                ###
-###                                                ###
-######################################################
-
-
-- alias: Send message at a given time
-  trigger:
-    platform: time
-    hours: 14
-    minutes: 55
-    seconds: 0
-  action:
-    service: notify.jabber
-    data:
-      message: 'Time for lunch'
