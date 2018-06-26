@@ -109,8 +109,8 @@
 - alias: Send message at a given time
   trigger:
     platform: time
-    hours: 9
-    minutes: 10
+    hours: 14
+    minutes: 55
     seconds: 0
   action:
     service: notify.jabber

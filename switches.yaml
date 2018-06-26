@@ -19,13 +19,3 @@
   payload_off: "OFF"
   optimistic: false
   retain: true
-
-- platform: mqtt
-  name: "Livingroom blinds1"
-  state_topic: "livingroom/switch/blinds1"
-  command_topic: "livingroom/switch/blinds1"
-  qos: 0
-  payload_on: "OPEN"
-  payload_off: "CLOSED"
-  optimistic: false
-  retain: true

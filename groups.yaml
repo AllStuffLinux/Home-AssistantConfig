@@ -17,7 +17,6 @@ default_view:
     - group.date_time
     - group.restart_hass
     - group.hass_theme
-#    - sensor.pihole_ads_blocked_today
 
 ######################################################
 ###                                                ###
@@ -70,7 +69,6 @@ livingroom:
   - sensor.humidity_living_room
   - switch.livingroom_lamp
   - media_player.googlehome7678
-  - switch.living_room_blinds1
   icon: mdi:sofa
 
 ######################################################
@@ -191,58 +189,3 @@ device_tracker_view:
     icon: mdi:wifi
     entities:
     - group.all_devices
-
-
-######################################################
-###                                                ###
-###                    PI-HOLE                     ###
-###                                                ###
-######################################################
-
-Pi-Hole view:
-  name: Pi Hole
-  view: yes
-  entities:
-  - group.pihole
-pi-hole:
-    name: Pi-Hole
-    entities:
-    - binary_sensor.pihole
-    - sensor.pihole_ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_queries_cached
-    - sensor.pihole_dns_queries_forwarded
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_dns_unique_clients
-    - sensor.pihole_dns_unique_domains
-    - sensor.pihole_domains_blocked
-
-######################################################
-###                                                ###
-###                      GLANCES                   ###
-###                                                ###
-######################################################
-
-VM Host view:
-  name: VM Host
-  view: yes
-  entities:
-  - group.vmhost
-VM-Host:
-  name: VM Host
-  entities:
-  - sensor.vm_host_cpu_load
-  - sensor.vm_host_cpu_temp
-  - sensor.vm_host_disk_free
-  - sensor.vm_host_disk_used
-  - sensor.vm_host_disk_used_2
-  - sensor.vm_host_ram_free
-  - sensor.vm_host_ram_used
-  - sensor.vm_host_ram_used_2
-  - sensor.vm_host_running
-  - sensor.vm_host_sleeping
-  - sensor.vm_host_swap_free
-  - sensor.vm_host_swap_used
-  - sensor.vm_host_swap_used_2
-  - sensor.vm_host_thread
-  - sensor.vm_host_total
